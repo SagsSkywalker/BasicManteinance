@@ -13,7 +13,8 @@ namespace UnoSquare_Maintenance
         IWebDriver driver;
         public IWebDriver SetUpDriver()
         {
-            driver = new ChromeDriver();
+            //Adding my local path
+            driver = new ChromeDriver(@"C:\Webdrivers\");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             return driver;
